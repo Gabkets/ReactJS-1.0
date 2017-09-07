@@ -1,0 +1,35 @@
+- Funciontal (Stateless) Component y Class component (con estados)
+
+- Los estados no se pasan de un componente a otro
+
+Estados:
+usamos constructor con props
+constructor(props){
+  super(props);
+  this.state = { //Solo en el constructor
+    objetos que quiero mantener durante el estado.
+  }
+}
+
+Luego accedemos en el render como : {this.state.description}
+
+Para actualizar el state
+this.setState({
+  objeto a modificar
+});
+
+this.setState(function(prevState, props){
+  return{
+    counter: prevState.counter + props.increments
+  }
+});
+
+Inmutablidad
+Objetos no se pisan, se genera un newObject para tener una trazabilidad del objeto y de esa manera sabemos cual fue el estado inicial o previo.
+
+
+THIS :
+Impicit binding
+Explicit binding
+new Binding
+Otro buscar
